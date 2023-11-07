@@ -36,8 +36,9 @@ class ViewController: UIViewController {
         }
 //        buttonsArray?.forEach { $0.addTarget(self, action: #selector(buttonTapped), for: .touchDownRepeat) }
         
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(longPress))
-        buttonsArray?.forEach { $0.addGestureRecognizer(longPress) }
+//        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(longPress))
+//        longPress.delegate = self
+//        buttonsArray?.forEach { $0.addGestureRecognizer(longPress) }
     }
     
 //    @objc private func buttonTapped(_ sender: BlueButton) {
@@ -48,13 +49,13 @@ class ViewController: UIViewController {
 //        }
 //    }
     
-    @objc func longPress(gesture: UILongPressGestureRecognizer) {
-        if gesture.state == .began {
-            print("Long Press")
-        } else if gesture.state == .cancelled || gesture.state == .ended {
-            print("Ended")
-        }
-    }
+//    @objc func longPress(gesture: UILongPressGestureRecognizer) {
+//        if gesture.state == .began {
+//            print("Long Press")
+//        } else if gesture.state == .cancelled || gesture.state == .ended {
+//            print("Ended")
+//        }
+//    }
 }
 
 //MARK: - Constraints

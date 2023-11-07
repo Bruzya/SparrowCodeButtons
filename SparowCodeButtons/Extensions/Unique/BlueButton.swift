@@ -17,6 +17,7 @@ class BlueButton: UIButton {
     convenience init(title: String) {
         self.init(type: .custom)
         configure(for: title)
+        addTargets()
     }
     
     required init?(coder: NSCoder) {
@@ -41,4 +42,25 @@ class BlueButton: UIButton {
         self.configuration = configuration
         translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    private func addTargets() {
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(longPress))
+        addGestureRecognizer(longPress)
+    }
+    
+    private func push() {
+        let push = CABasicAnimation(keyPath: "transform.scale")
+        push.fromValue = 1
+        push.toValue = 0.9
+        push.autoreverses = true
+        layer.add(push, forKey: nil)
+    }
+    
+    @objc private func longPress(gesture: UILongPressGestureRecognizer) {
+            while gesture.state == .began {
+                push()
+            
+        }
+    }
 }
+
