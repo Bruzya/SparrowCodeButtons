@@ -12,6 +12,8 @@
 		52CD6AB92AF8F623001F8F19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD6AB82AF8F623001F8F19 /* ViewController.swift */; };
 		52CD6ABE2AF8F624001F8F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CD6ABD2AF8F624001F8F19 /* Assets.xcassets */; };
 		52CD6AC12AF8F624001F8F19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CD6ABF2AF8F624001F8F19 /* LaunchScreen.storyboard */; };
+		52CD6ACE2AF8F86C001F8F19 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD6ACD2AF8F86C001F8F19 /* BlueButton.swift */; };
+		52CD6AD22AF9ADCE001F8F19 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD6AD12AF9ADCE001F8F19 /* ModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		52CD6ABD2AF8F624001F8F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52CD6AC02AF8F624001F8F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52CD6AC22AF8F624001F8F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52CD6ACD2AF8F86C001F8F19 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
+		52CD6AD12AF9ADCE001F8F19 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 		52CD6AC92AF8F6B7001F8F19 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				52CD6ACC2AF8F85E001F8F19 /* Unique */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -83,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				52CD6AB82AF8F623001F8F19 /* ViewController.swift */,
+				52CD6AD12AF9ADCE001F8F19 /* ModalViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -94,6 +100,14 @@
 				52CD6AB62AF8F623001F8F19 /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		52CD6ACC2AF8F85E001F8F19 /* Unique */ = {
+			isa = PBXGroup;
+			children = (
+				52CD6ACD2AF8F86C001F8F19 /* BlueButton.swift */,
+			);
+			path = Unique;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,8 +181,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				52CD6AB92AF8F623001F8F19 /* ViewController.swift in Sources */,
+				52CD6AD22AF9ADCE001F8F19 /* ModalViewController.swift in Sources */,
 				52CD6AB52AF8F623001F8F19 /* AppDelegate.swift in Sources */,
 				52CD6AB72AF8F623001F8F19 /* SceneDelegate.swift in Sources */,
+				52CD6ACE2AF8F86C001F8F19 /* BlueButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
