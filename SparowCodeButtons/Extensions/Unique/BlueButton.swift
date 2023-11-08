@@ -16,7 +16,11 @@ class BlueButton: UIButton {
     
     convenience init(title: String) {
         self.init(type: .custom)
-        configure(for: title)
+        configure()
+        
+        setTitle(title, for: .normal)
+        setImage(.init(systemName: "arrow.forward.circle.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        setImage(.init(systemName: "arrow.forward.circle.fill")?.withRenderingMode(.alwaysTemplate), for: .highlighted)
         addTargets()
     }
     
@@ -25,13 +29,11 @@ class BlueButton: UIButton {
     }
     
     //MARK: - Methods
-    private func configure(for title: String) {
+    private func configure() {
         var configuration = UIButton.Configuration.filled()
-        configuration.title = title
         configuration.baseForegroundColor = .white
         configuration.baseBackgroundColor = .systemBlue
         configuration.cornerStyle = .large
-        configuration.image = UIImage(systemName: "arrow.forward.circle.fill")
         configuration.imagePlacement = .trailing
         configuration.imagePadding = 8
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 10,
@@ -48,19 +50,8 @@ class BlueButton: UIButton {
         addGestureRecognizer(longPress)
     }
     
-    private func push() {
-        let push = CABasicAnimation(keyPath: "transform.scale")
-        push.fromValue = 1
-        push.toValue = 0.9
-        push.autoreverses = true
-        layer.add(push, forKey: nil)
-    }
-    
     @objc private func longPress(gesture: UILongPressGestureRecognizer) {
-            while gesture.state == .began {
-                push()
-            
-        }
+        
     }
 }
 
